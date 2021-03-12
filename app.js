@@ -5,6 +5,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const models = require('./models')
 const { Op } = require('sequelize');
+const { Sequelize } = require('./models');
 
 // when the bot is ready console log that it is logged in
 client.on('ready', () => {
@@ -30,40 +31,48 @@ client.on('message', async msg => {
       const item = await 
       models.item.findOne(
         {
-          where: 
-          {
-            name: 
-            { 
-              [Op.iLike]: `%${itemName}` 
-            }
-          }, 
+          where: { name: { [Op.iLike]: `%${itemName}%` } }, 
           include: [
             {
               model: models.component,
               attributes: ['id', 'amount', 'componentId', 'createdAt', 'updatedAt'],
               include: [
                 {
+                  seperate: true,
                   model: models.item,
-                  where: {
-                    'itemId': 'componentId'
-                  //   // id: 0 // find a way to get this to use each id of the things that area associated??
-                  //   [Op.col]: 'Item.id'
-                  }
-                  // as: 'componentName'
-                  // association: 'componentId'
+                  // where: {
+                  //   // id: {[Op.col]: 'components.componentId'}
+                  //   // id: Sequelize.col('componentId')
+                  //   id: {
+                  //     [Op.col]: 'component.componentId'
+                  //   }
+                  // },
+                  // required: true,!build empress shield
+                  // attributes: ['components']
+                  // where: {
+                  //   id: 
+                  //   // {
+                  //   //   [Op.col]: 'components.componentId'
+                  //   //   // [Op.col]: 'componentId'
+                  //   // }
+                  // },
+                  // required: true
+                  // through: {
+                    // where: {
+                    //   id: {
+                    //     [Op.col]: 'components.componentId'
+                    //   }
+                    // }
+                  // }
+                  // joinTableAttributes: ['name']
                 }
-              ]
+              ],
               
             },
-            // {
-            //   model: models.item            }
-            // 'components', 
-            // 'items'
-            // {
-              // model: models.item
-              // model: models.component
-            // }
-          ]
+          ],
+          // subquery: false
+          // subQuery: false
+          // required: false
         }
       )
       console.log(item)
@@ -72,6 +81,16 @@ client.on('message', async msg => {
     } else {
       msg.channel.send(itemName)
     }
+  }
+
+  else if (msg.content.startsWith('!rb')) {
+    const input = msg.content.split(' ')
+    input.shift()
+    const query = input.join(' ')
+
+    // query on new tables
+
+    console.log(query)
   }
 });
 

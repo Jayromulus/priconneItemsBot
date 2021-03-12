@@ -11,7 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      component.belongsTo(models.item)
+      // I hate it here i hop everything burns down and i will feel nothing
+      component.belongsTo(models.item, {
+        foreignKey: 'componentId'
+      })
       // component.hasMany(models.item, {
       //   foreignKey: 'itemId',
       //   as: 'item'
