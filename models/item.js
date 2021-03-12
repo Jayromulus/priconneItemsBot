@@ -46,6 +46,3 @@ module.exports = (sequelize, DataTypes) => {
   });
   return item;
 };
-
-
-// how the hell am i supposed to make it so that an item has components but an item could also be a component to another item and i need to be able to view other components that the item is made out of
