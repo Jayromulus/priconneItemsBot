@@ -35,36 +35,42 @@ client.on('message', async msg => {
           include: [
             {
               model: models.component,
-              attributes: ['id', 'amount', 'componentId', 'createdAt', 'updatedAt'],
+              // attributes: ['id', 'amount', 'componentId', 'createdAt', 'updatedAt'],
               include: [
                 {
                   seperate: true,
                   model: models.item,
-                  // where: {
-                  //   // id: {[Op.col]: 'components.componentId'}
-                  //   // id: Sequelize.col('componentId')
-                  //   id: {
-                  //     [Op.col]: 'component.componentId'
-                  //   }
-                  // },
-                  // required: true,!build empress shield
-                  // attributes: ['components']
-                  // where: {
-                  //   id: 
-                  //   // {
-                  //   //   [Op.col]: 'components.componentId'
-                  //   //   // [Op.col]: 'componentId'
-                  //   // }
-                  // },
-                  // required: true
-                  // through: {
-                    // where: {
-                    //   id: {
-                    //     [Op.col]: 'components.componentId'
-                    //   }
-                    // }
-                  // }
-                  // joinTableAttributes: ['name']
+                  include: [
+                    {   
+                      seperate: true,
+                      model: models.component,
+                      include: [
+                        {
+                          seperate: true,
+                          model: models.item,
+                          include: [
+                            {   
+                              seperate: true,
+                              model: models.component,
+                              include: [
+                                {
+                                  seperate: true,
+                                  model: models.item,
+                                  include: [
+                                    {   
+                                      seperate: true,
+                                      model: models.component,
+                                      
+                                    }
+                                  ],
+                                }
+                              ],
+                            }
+                          ],
+                        }
+                      ],
+                    }
+                  ],
                 }
               ],
               
