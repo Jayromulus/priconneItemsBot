@@ -23,11 +23,11 @@ client.on('message', async msg => {
     msg.channel.send('good testing dude!')
   } 
   
-  else if(msg.content.startsWith('!build')) {
+  else if(msg.content.startsWith('?b')) {
     const space = msg.content.split(' ');
     space.shift();
     const itemName = space.join(' ');
-    if(itemName.toLowerCase() === 'empress shield') {
+    if(itemName.toLowerCase() === 'empress shield' || itemName.toLowerCase().includes('empress')) {
       const item = await 
       models.item.findOne(
         {
@@ -36,6 +36,7 @@ client.on('message', async msg => {
             {
               model: models.component,
               // attributes: ['id', 'amount', 'componentId', 'createdAt', 'updatedAt'],
+              // I KNOW THIS IS TOO MANY INCLUDES AND SUPER MESSY BUT WORKS SO I DONT CARE
               include: [
                 {
                   seperate: true,
@@ -76,9 +77,6 @@ client.on('message', async msg => {
               
             },
           ],
-          // subquery: false
-          // subQuery: false
-          // required: false
         }
       )
       console.log(item)
