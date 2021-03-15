@@ -14,195 +14,195 @@ module.exports = {
 
     await queryInterface.bulkInsert('items', [
       // COMMONS 15
-      { id: 1, name: 'Iron Blade', createdAt: new Date(), updatedAt: new Date() },
-      { id: 2, name: 'Wooden Shield', createdAt: new Date(), updatedAt: new Date() },
-      { id: 3, name: 'Leather Overalls', createdAt: new Date(), updatedAt: new Date() },
-      { id: 4, name: 'Motivational Bracelet', createdAt: new Date(), updatedAt: new Date() },
-      { id: 5, name: 'Charm Pendant', createdAt: new Date(), updatedAt: new Date() },
-      { id: 6, name: 'Fragrant Wood Staff', createdAt: new Date(), updatedAt: new Date() },
-      { id: 7, name: 'Traveler\'s Robe', createdAt: new Date(), updatedAt: new Date() },
-      { id: 8, name: 'Fashionable Beret', createdAt: new Date(), updatedAt: new Date() },
-      { id: 9, name: 'Warcry Bracelet', createdAt: new Date(), updatedAt: new Date() },
-      { id: 10, name: 'Steel Spear', createdAt: new Date(), updatedAt: new Date() },
-      { id: 11, name: 'Leather Boots', createdAt: new Date(), updatedAt: new Date() },
-      { id: 12, name: 'Hand Axe', createdAt: new Date(), updatedAt: new Date() },
-      { id: 13, name: 'Wooden Knuckles', createdAt: new Date(), updatedAt: new Date() },
-      { id: 14, name: 'Killer Pen', createdAt: new Date(), updatedAt: new Date() },
-      { id: 15, name: 'Hunter\'s Bow', createdAt: new Date(), updatedAt: new Date() },
+      { id: 1, grade: 'Common', name: 'Iron Blade', createdAt: new Date(), updatedAt: new Date() },
+      { id: 2, grade: 'Common', name: 'Wooden Shield', createdAt: new Date(), updatedAt: new Date() },
+      { id: 3, grade: 'Common', name: 'Leather Overalls', createdAt: new Date(), updatedAt: new Date() },
+      { id: 4, grade: 'Common', name: 'Motivational Bracelet', createdAt: new Date(), updatedAt: new Date() },
+      { id: 5, grade: 'Common', name: 'Charm Pendant', createdAt: new Date(), updatedAt: new Date() },
+      { id: 6, grade: 'Common', name: 'Fragrant Wood Staff', createdAt: new Date(), updatedAt: new Date() },
+      { id: 7, grade: 'Common', name: 'Traveler\'s Robe', createdAt: new Date(), updatedAt: new Date() },
+      { id: 8, grade: 'Common', name: 'Fashionable Beret', createdAt: new Date(), updatedAt: new Date() },
+      { id: 9, grade: 'Common', name: 'Warcry Bracelet', createdAt: new Date(), updatedAt: new Date() },
+      { id: 10, grade: 'Common', name: 'Steel Spear', createdAt: new Date(), updatedAt: new Date() },
+      { id: 11, grade: 'Common', name: 'Leather Boots', createdAt: new Date(), updatedAt: new Date() },
+      { id: 12, grade: 'Common', name: 'Hand Axe', createdAt: new Date(), updatedAt: new Date() },
+      { id: 13, grade: 'Common', name: 'Wooden Knuckles', createdAt: new Date(), updatedAt: new Date() },
+      { id: 14, grade: 'Common', name: 'Killer Pen', createdAt: new Date(), updatedAt: new Date() },
+      { id: 15, grade: 'Common', name: 'Hunter\'s Bow', createdAt: new Date(), updatedAt: new Date() },
       // COPPER 38
-      { id: 16, name: 'Gear Blade', createdAt: new Date(), updatedAt: new Date() },
-      { id: 17, name: 'Blue Blood', createdAt: new Date(), updatedAt: new Date() },
-      { id: 18, name: 'Aurora Sword', createdAt: new Date(), updatedAt: new Date() },
-      { id: 19, name: 'Crescent Sword', createdAt: new Date(), updatedAt: new Date() },
-      { id: 20, name: 'Commando Knife', createdAt: new Date(), updatedAt: new Date() },
-      { id: 21, name: 'Leather Knuckles', createdAt: new Date(), updatedAt: new Date() },
-      { id: 22, name: 'Crystal Bow', createdAt: new Date(), updatedAt: new Date() },
-      { id: 23, name: 'Trident', createdAt: new Date(), updatedAt: new Date() },
-      { id: 24, name: 'Flame Spear', createdAt: new Date(), updatedAt: new Date() },
-      { id: 25, name: 'Metal Axe', createdAt: new Date(), updatedAt: new Date() },
-      { id: 26, name: 'Full Metal Axe', createdAt: new Date(), updatedAt: new Date() },
-      { id: 27, name: 'Green Rod', createdAt: new Date(), updatedAt: new Date() },
-      { id: 28, name: 'Little Dragon Rod', createdAt: new Date(), updatedAt: new Date() },
-      { id: 29, name: 'Staff of Vitality', createdAt: new Date(), updatedAt: new Date() },
-      { id: 30, name: 'Unicorn\'s Grace', createdAt: new Date(), updatedAt: new Date() },
-      { id: 31, name: 'Sage\'s Vestment', createdAt: new Date(), updatedAt: new Date() },
-      { id: 32, name: 'Light Plate Armor', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 33, name: 'Scalemail', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 34, name: 'Full Plate Armor', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 35, name: 'Folkloric Garment', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 36, name: 'Ninja Outfit', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 37, name: 'Springtime Robe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 38, name: 'Nordic Robe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 39, name: 'Tower Shield', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 40, name: 'Crown Boots', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 41, name: 'Hunting Boots', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 42, name: 'Witch\'s Boots', createdAt: new Date(), updatedAt: new Date() },
-      { id: 43, name: 'Cute Cap', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 44, name: 'Legionaire Helm', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 45, name: 'Priestess Hood', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 46, name: 'Jewel of Courage', createdAt: new Date(), updatedAt: new Date() },
-      { id: 47, name: 'Spiked Bangle', createdAt: new Date(), updatedAt: new Date() },
-      { id: 48, name: 'Benevolent Jewel', createdAt: new Date(), updatedAt: new Date() },
-      { id: 49, name: 'Victory Friendship Bracelet', createdAt: new Date(), updatedAt: new Date() },
-      { id: 50, name: 'Magic Glasses', createdAt: new Date(), updatedAt: new Date() },
-      { id: 51, name: 'Orb of Wisdom', createdAt: new Date(), updatedAt: new Date() },
-      { id: 52, name: 'Magic Monocle', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 53, name: 'Patterned Bracelet', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 16, grade: 'Copper', name: 'Gear Blade', createdAt: new Date(), updatedAt: new Date() },
+      { id: 17, grade: 'Copper', name: 'Blue Blood', createdAt: new Date(), updatedAt: new Date() },
+      { id: 18, grade: 'Copper', name: 'Aurora Sword', createdAt: new Date(), updatedAt: new Date() },
+      { id: 19, grade: 'Copper', name: 'Crescent Sword', createdAt: new Date(), updatedAt: new Date() },
+      { id: 20, grade: 'Copper', name: 'Commando Knife', createdAt: new Date(), updatedAt: new Date() },
+      { id: 21, grade: 'Copper', name: 'Leather Knuckles', createdAt: new Date(), updatedAt: new Date() },
+      { id: 22, grade: 'Copper', name: 'Crystal Bow', createdAt: new Date(), updatedAt: new Date() },
+      { id: 23, grade: 'Copper', name: 'Trident', createdAt: new Date(), updatedAt: new Date() },
+      { id: 24, grade: 'Copper', name: 'Flame Spear', createdAt: new Date(), updatedAt: new Date() },
+      { id: 25, grade: 'Copper', name: 'Metal Axe', createdAt: new Date(), updatedAt: new Date() },
+      { id: 26, grade: 'Copper', name: 'Full Metal Axe', createdAt: new Date(), updatedAt: new Date() },
+      { id: 27, grade: 'Copper', name: 'Green Rod', createdAt: new Date(), updatedAt: new Date() },
+      { id: 28, grade: 'Copper', name: 'Little Dragon Rod', createdAt: new Date(), updatedAt: new Date() },
+      { id: 29, grade: 'Copper', name: 'Staff of Vitality', createdAt: new Date(), updatedAt: new Date() },
+      { id: 30, grade: 'Copper', name: 'Unicorn\'s Grace', createdAt: new Date(), updatedAt: new Date() },
+      { id: 31, grade: 'Copper', name: 'Sage\'s Vestment', createdAt: new Date(), updatedAt: new Date() },
+      { id: 32, grade: 'Copper', name: 'Light Plate Armor', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 33, grade: 'Copper', name: 'Scalemail', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 34, grade: 'Copper', name: 'Full Plate Armor', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 35, grade: 'Copper', name: 'Folkloric Garment', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 36, grade: 'Copper', name: 'Ninja Outfit', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 37, grade: 'Copper', name: 'Springtime Robe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 38, grade: 'Copper', name: 'Nordic Robe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 39, grade: 'Copper', name: 'Tower Shield', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 40, grade: 'Copper', name: 'Crown Boots', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 41, grade: 'Copper', name: 'Hunting Boots', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 42, grade: 'Copper', name: 'Witch\'s Boots', createdAt: new Date(), updatedAt: new Date() },
+      { id: 43, grade: 'Copper', name: 'Cute Cap', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 44, grade: 'Copper', name: 'Legionaire Helm', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 45, grade: 'Copper', name: 'Priestess Hood', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 46, grade: 'Copper', name: 'Jewel of Courage', createdAt: new Date(), updatedAt: new Date() },
+      { id: 47, grade: 'Copper', name: 'Spiked Bangle', createdAt: new Date(), updatedAt: new Date() },
+      { id: 48, grade: 'Copper', name: 'Benevolent Jewel', createdAt: new Date(), updatedAt: new Date() },
+      { id: 49, grade: 'Copper', name: 'Victory Friendship Bracelet', createdAt: new Date(), updatedAt: new Date() },
+      { id: 50, grade: 'Copper', name: 'Magic Glasses', createdAt: new Date(), updatedAt: new Date() },
+      { id: 51, grade: 'Copper', name: 'Orb of Wisdom', createdAt: new Date(), updatedAt: new Date() },
+      { id: 52, grade: 'Copper', name: 'Magic Monocle', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 53, grade: 'Copper', name: 'Patterned Bracelet', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
       // SILVER 45
-      { id: 54, name: 'Sparkling Sword', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 55, name: 'Dragon Crest Sword', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 56, name: 'Feather Blade', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 57, name: 'Moonlight Sword', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 58, name: 'Thunder Katana', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 59, name: 'Platinum Knife', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 60, name: 'Vampire\'s Dagger', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 61, name: 'Dragon\'s Claw', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 62, name: 'Cupid\'s Bow', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 63, name: 'Devil\'s Bow', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 64, name: 'A Knight\'s Pride', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 65, name: 'Super Spear', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 66, name: 'Blue Sphere Axe', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 67, name: 'Graceful Flower Battleaxe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 68, name: 'Lightning Bolt Axe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 69, name: 'Thornblood Rod', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 70, name: 'Devil\'s Horn', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 71, name: 'Protector of the Heavens', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 72, name: 'Flower Bud Staff', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 73, name: 'Fashionable Armor', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 74, name: 'Battle Dress', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 75, name: 'Heavy Metal Armor', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 76, name: 'Gorgeous Armor', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 77, name: 'Leather Robe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 78, name: 'Palace Uniform', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 79, name: 'Cosmic Veil', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 80, name: 'Cupid\'s Robe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 81, name: 'Philosopher\'s Robe', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 82, name: 'Garnet Shield', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 83, name: 'Ninja Shoes', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 84, name: 'Fencing Boots', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 85, name: 'Witch\'s Palace Boots', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 86, name: 'Dragon\'s Head', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 87, name: 'Witch\'s Headband', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 88, name: 'Witch\'s Hat', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 89, name: 'Opal Earrings', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 90, name: 'Gryphon Feather Headress', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 91, name: 'Scarlet Diamonds', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 92, name: 'Emerald Earrings', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 93, name: 'Octogram Pendant', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 94, name: 'Lion King\'s Grace', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 95, name: 'Turquoise Earrings', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 96, name: 'Pearl Earrings', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 97, name: 'Sorcerer Glasses', createdAt: new Date(), updatedAt: new Date() },
-      { id: 98, name: 'Laurel\'s Sorrow', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 54, grade: 'Silver', name: 'Sparkling Sword', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 55, grade: 'Silver', name: 'Dragon Crest Sword', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 56, grade: 'Silver', name: 'Feather Blade', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 57, grade: 'Silver', name: 'Moonlight Sword', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 58, grade: 'Silver', name: 'Thunder Katana', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 59, grade: 'Silver', name: 'Platinum Knife', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 60, grade: 'Silver', name: 'Vampire\'s Dagger', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 61, grade: 'Silver', name: 'Dragon\'s Claw', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 62, grade: 'Silver', name: 'Cupid\'s Bow', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 63, grade: 'Silver', name: 'Devil\'s Bow', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 64, grade: 'Silver', name: 'A Knight\'s Pride', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 65, grade: 'Silver', name: 'Super Spear', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 66, grade: 'Silver', name: 'Blue Sphere Axe', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 67, grade: 'Silver', name: 'Graceful Flower Battleaxe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 68, grade: 'Silver', name: 'Lightning Bolt Axe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 69, grade: 'Silver', name: 'Thornblood Rod', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 70, grade: 'Silver', name: 'Devil\'s Horn', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 71, grade: 'Silver', name: 'Protector of the Heavens', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 72, grade: 'Silver', name: 'Flower Bud Staff', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 73, grade: 'Silver', name: 'Fashionable Armor', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 74, grade: 'Silver', name: 'Battle Dress', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 75, grade: 'Silver', name: 'Heavy Metal Armor', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 76, grade: 'Silver', name: 'Gorgeous Armor', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 77, grade: 'Silver', name: 'Leather Robe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 78, grade: 'Silver', name: 'Palace Uniform', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 79, grade: 'Silver', name: 'Cosmic Veil', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 80, grade: 'Silver', name: 'Cupid\'s Robe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 81, grade: 'Silver', name: 'Philosopher\'s Robe', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 82, grade: 'Silver', name: 'Garnet Shield', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 83, grade: 'Silver', name: 'Ninja Shoes', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 84, grade: 'Silver', name: 'Fencing Boots', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 85, grade: 'Silver', name: 'Witch\'s Palace Boots', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 86, grade: 'Silver', name: 'Dragon\'s Head', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 87, grade: 'Silver', name: 'Witch\'s Headband', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 88, grade: 'Silver', name: 'Witch\'s Hat', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 89, grade: 'Silver', name: 'Opal Earrings', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 90, grade: 'Silver', name: 'Gryphon Feather Headress', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 91, grade: 'Silver', name: 'Scarlet Diamonds', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 92, grade: 'Silver', name: 'Emerald Earrings', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 93, grade: 'Silver', name: 'Octogram Pendant', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 94, grade: 'Silver', name: 'Lion King\'s Grace', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 95, grade: 'Silver', name: 'Turquoise Earrings', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 96, grade: 'Silver', name: 'Pearl Earrings', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 97, grade: 'Silver', name: 'Sorcerer Glasses', createdAt: new Date(), updatedAt: new Date() },
+      { id: 98, grade: 'Silver', name: 'Laurel\'s Sorrow', createdAt: new Date(), updatedAt: new Date() }, // Shard
       // GOLD 73
-      { id: 99, name: 'Angelic Blade', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 100, name: 'Sun Blade', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 101, name: 'Beautiful Butterfly Katana', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 102, name: 'Iridescent Blade', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 103, name: 'Precious Knife', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 104, name: 'Princess Blade', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 105, name: 'Blazing Gauntlet', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 106, name: 'Lionheart\'s Gauntlet', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 107, name: 'Lightning Bow', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 108, name: 'Angel Bow', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 109, name: 'Scarlet Dragon Lance', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 110, name: 'Queen Bee Spear', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 111, name: 'Purple Dragon Axe', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 112, name: 'Hellfire Axe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 113, name: 'Fury Rod', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 114, name: 'Sun Rod', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 115, name: 'Moon Flower Cane', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 116, name: 'Life Rod', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 117, name: 'Invisible Dress', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 118, name: 'Angelic Armor', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 119, name: 'Moonlit Robe', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 120, name: 'Grand Wizard\'s Robe', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 121, name: 'Empress Shield', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 122, name: 'Paladin Greaves', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 123, name: 'Wizard\'s Boots', createdAt: new Date(), updatedAt: new Date() }, // Shard
-      { id: 124, name: 'Feather Waltz', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 125, name: 'Wizard\'s Hood', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 99, grade: 'Gold', name: 'Angelic Blade', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 100, grade: 'Gold', name: 'Sun Blade', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 101, grade: 'Gold', name: 'Beautiful Butterfly Katana', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 102, grade: 'Gold', name: 'Iridescent Blade', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 103, grade: 'Gold', name: 'Precious Knife', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 104, grade: 'Gold', name: 'Princess Blade', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 105, grade: 'Gold', name: 'Blazing Gauntlet', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 106, grade: 'Gold', name: 'Lionheart\'s Gauntlet', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 107, grade: 'Gold', name: 'Lightning Bow', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 108, grade: 'Gold', name: 'Angel Bow', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 109, grade: 'Gold', name: 'Scarlet Dragon Lance', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 110, grade: 'Gold', name: 'Queen Bee Spear', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 111, grade: 'Gold', name: 'Purple Dragon Axe', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 112, grade: 'Gold', name: 'Hellfire Axe', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 113, grade: 'Gold', name: 'Fury Rod', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 114, grade: 'Gold', name: 'Sun Rod', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 115, grade: 'Gold', name: 'Moon Flower Cane', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 116, grade: 'Gold', name: 'Life Rod', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 117, grade: 'Gold', name: 'Invisible Dress', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 118, grade: 'Gold', name: 'Angelic Armor', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 119, grade: 'Gold', name: 'Moonlit Robe', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 120, grade: 'Gold', name: 'Grand Wizard\'s Robe', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 121, grade: 'Gold', name: 'Empress Shield', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 122, grade: 'Gold', name: 'Paladin Greaves', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 123, grade: 'Gold', name: 'Wizard\'s Boots', createdAt: new Date(), updatedAt: new Date() }, // Shard
+      { id: 124, grade: 'Gold', name: 'Feather Waltz', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 125, grade: 'Gold', name: 'Wizard\'s Hood', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
       // COPPER COMPONENTS
-      { id: 126, name: 'Light Plate Armor Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 127, name: 'Scalemail Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 128, name: 'Full Plate Armor Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 129, name: 'Folkloric Garment Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 130, name: 'Ninja Outfit Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 131, name: 'Springtime Robe Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 132, name: 'Nordic Robe Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 133, name: 'Tower Shield Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 134, name: 'Crown Boots Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 135, name: 'Hunting Boots Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 136, name: 'Cute Cap Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 137, name: 'Legionaire Helm Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 138, name: 'Prisetess Hood Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 139, name: 'Magic Monocle Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 140, name: 'Patterned Bracelet Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 126, grade: 'Copper', name: 'Light Plate Armor Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 127, grade: 'Copper', name: 'Scalemail Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 128, grade: 'Copper', name: 'Full Plate Armor Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 129, grade: 'Copper', name: 'Folkloric Garment Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 130, grade: 'Copper', name: 'Ninja Outfit Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 131, grade: 'Copper', name: 'Springtime Robe Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 132, grade: 'Copper', name: 'Nordic Robe Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 133, grade: 'Copper', name: 'Tower Shield Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 134, grade: 'Copper', name: 'Crown Boots Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 135, grade: 'Copper', name: 'Hunting Boots Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 136, grade: 'Copper', name: 'Cute Cap Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 137, grade: 'Copper', name: 'Legionaire Helm Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 138, grade: 'Copper', name: 'Prisetess Hood Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 139, grade: 'Copper', name: 'Magic Monocle Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 140, grade: 'Copper', name: 'Patterned Bracelet Blueprint', createdAt: new Date(), updatedAt: new Date() },
       // SILVER COMPONENTS
-      { id: 141, name: 'Sparkling Sword (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 142, name: 'Dragon Crest Sword (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 143, name: 'Feather Blade (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 144, name: 'Moonlight Sword Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 145, name: 'Thunder Katana Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 146, name: 'Platinum Knife (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 147, name: 'Vampire\'s Dagger Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 148, name: 'Dragon\'s Claw (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 149, name: 'Cupid\'s Bow (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 150, name: 'Devil\'s Bow Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 151, name: 'A Knight\'s Pride Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 152, name: 'Super Spear (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 153, name: 'Blue Sphere Axe (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 154, name: 'Graceful Flower Battleaxe Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 155, name: 'Lightning Bolt Axe Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 156, name: 'Thornblood Rod (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 157, name: 'Devil\s Horn (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 158, name: 'Protector of the Heavens Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 159, name: 'Flower Bud Staff (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 160, name: 'Fashionable Armor Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 161, name: 'Battle Dress Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 162, name: 'Heavy Metal Armor (Fragment', createdAt: new Date(), updatedAt: new Date() },
-      { id: 163, name: 'Gorgeous Armor Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 164, name: 'Leather Robe Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 165, name: 'Palace Uniform (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 166, name: 'Cosmic Veil Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 167, name: 'Cupid\'s Robe Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 168, name: 'Philosopher\'s Robe (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 169, name: 'Garnet Shield (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 170, name: 'Ninja Shoes (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 171, name: 'Fencing Boots Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 172, name: 'Witch\'s Palace Boots Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 173, name: 'Dragon\'s Head Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 174, name: 'Witch\'s Headband (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 175, name: 'Witch\'s Hat (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 176, name: 'Opal Earrings (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 177, name: 'Gryphon Feather Headress (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 178, name: 'Scarlet Diamonds (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 179, name: 'Emerald Earrings (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 180, name: 'Octogram Pendant Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 181, name: 'Lion King\'s Grace Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 182, name: 'Turquoise Earrings (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 183, name: 'Pearl Earrings Blueprint', createdAt: new Date(), updatedAt: new Date() },
-      { id: 184, name: 'Laurel\'s Sorrow (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 141, grade: 'Silver', name: 'Sparkling Sword (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 142, grade: 'Silver', name: 'Dragon Crest Sword (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 143, grade: 'Silver', name: 'Feather Blade (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 144, grade: 'Silver', name: 'Moonlight Sword Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 145, grade: 'Silver', name: 'Thunder Katana Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 146, grade: 'Silver', name: 'Platinum Knife (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 147, grade: 'Silver', name: 'Vampire\'s Dagger Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 148, grade: 'Silver', name: 'Dragon\'s Claw (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 149, grade: 'Silver', name: 'Cupid\'s Bow (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 150, grade: 'Silver', name: 'Devil\'s Bow Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 151, grade: 'Silver', name: 'A Knight\'s Pride Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 152, grade: 'Silver', name: 'Super Spear (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 153, grade: 'Silver', name: 'Blue Sphere Axe (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 154, grade: 'Silver', name: 'Graceful Flower Battleaxe Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 155, grade: 'Silver', name: 'Lightning Bolt Axe Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 156, grade: 'Silver', name: 'Thornblood Rod (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 157, grade: 'Silver', name: 'Devil\s Horn (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 158, grade: 'Silver', name: 'Protector of the Heavens Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 159, grade: 'Silver', name: 'Flower Bud Staff (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 160, grade: 'Silver', name: 'Fashionable Armor Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 161, grade: 'Silver', name: 'Battle Dress Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 162, grade: 'Silver', name: 'Heavy Metal Armor (Fragment', createdAt: new Date(), updatedAt: new Date() },
+      { id: 163, grade: 'Silver', name: 'Gorgeous Armor Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 164, grade: 'Silver', name: 'Leather Robe Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 165, grade: 'Silver', name: 'Palace Uniform (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 166, grade: 'Silver', name: 'Cosmic Veil Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 167, grade: 'Silver', name: 'Cupid\'s Robe Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 168, grade: 'Silver', name: 'Philosopher\'s Robe (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 169, grade: 'Silver', name: 'Garnet Shield (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 170, grade: 'Silver', name: 'Ninja Shoes (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 171, grade: 'Silver', name: 'Fencing Boots Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 172, grade: 'Silver', name: 'Witch\'s Palace Boots Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 173, grade: 'Silver', name: 'Dragon\'s Head Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 174, grade: 'Silver', name: 'Witch\'s Headband (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 175, grade: 'Silver', name: 'Witch\'s Hat (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 176, grade: 'Silver', name: 'Opal Earrings (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 177, grade: 'Silver', name: 'Gryphon Feather Headress (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 178, grade: 'Silver', name: 'Scarlet Diamonds (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 179, grade: 'Silver', name: 'Emerald Earrings (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 180, grade: 'Silver', name: 'Octogram Pendant Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 181, grade: 'Silver', name: 'Lion King\'s Grace Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 182, grade: 'Silver', name: 'Turquoise Earrings (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 183, grade: 'Silver', name: 'Pearl Earrings Blueprint', createdAt: new Date(), updatedAt: new Date() },
+      { id: 184, grade: 'Silver', name: 'Laurel\'s Sorrow (Fragment)', createdAt: new Date(), updatedAt: new Date() },
       // GOLD COMPONENTS
       // { id: 184, name: '', createdAt: new Date(), updatedAt: new Date() },
       // { id: 185, name: '', createdAt: new Date(), updatedAt: new Date() },

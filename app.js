@@ -90,14 +90,14 @@ client.on('message', async msg => {
       )
     console.log(item, itemName);
     // dev display to see object output
-    // (await msg.channel.send(`\`\`\`${JSON.stringify(item, null, 2)}\`\`\``)).react(itemEmoteList[item.name])
+    (await msg.channel.send(`\`\`\`${JSON.stringify(item, null, 2)}\`\`\``))
     const newMsg = new Discord.MessageEmbed()
       .setTitle(item.name)
       // Set the color of the embed
-      // add another field to the item table that holds the rarity value to not need as stupid of a ternary
-      .setColor(item.id < 16 ? 0xffffff : item.id > 15 && item.id < 54 ? 0x756300 : item.id > 53 && item.id < 99 ? 0xc0c0c0 : item.id > 98 && item.id < 126 ? 0xffd700 : 0x000000)
+      .setColor(item.grade == 'Common' ? 0xffffff : item.grade == 'Copper' ? 0x756300 : item.grade == 'Silver' ? 0xc0c0c0 : item.grade == 'Gold' ? 0xffd700 : 0x000000)
       // Set the main content of the embed
-      .setDescription(item.components.map(instance => `${instance.item.name} x${instance.amount}`))
+      // to replace the name with the image you must replace the emote names with a matching name instead of leaving them as is to match properly
+      .setDescription(item.components.map(instance => `<:${instance.item.name.replace(' ', '').replace('\'', '')}:${itemEmoteList[instance.item.name]}>${instance.item.name} x${instance.amount}`))
       .setThumbnail(`https://cdn.discordapp.com/emojis/${itemEmoteList[item.name]}.png?v=1`);
 
     msg.channel.send(newMsg)

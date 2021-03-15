@@ -39,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   item.init({
     name: DataTypes.STRING,
+    grade: DataTypes.STRING
     // amount: DataTypes.INTEGER
   }, {
     sequelize,
