@@ -2,10 +2,11 @@ require('dotenv').config();
 // npm install discord.js
 const Discord = require('discord.js');
 // create a new instance of the discord client
-const client = new Discord.Client({ partials: ['MESSAGE', 'REACTION', 'CHANNEL']});
+const client = new Discord.Client({ partials: ['MESSAGE', 'REACTION', 'CHANNEL'] });
 const models = require('./models')
 const { Op } = require('sequelize');
 const { Sequelize } = require('./models');
+const itemEmoteList = require('./emotes.json');
 
 // MAKE A JSON FILE WITH ALL OF THE ITEM NAMES AND IDS TO USE SQUARE BRACKET NOTATION AS THE REACTIONS
 
@@ -17,25 +18,25 @@ client.on('ready', () => {
 
 // when there is a message then the bot will run this function, it looks like heavy moderation and conditions are needed to make sure it does not reply to itself and only when you want it to
 client.on('message', async msg => {
-  if(msg.author.bot){
+  if (msg.author.bot) {
     return;
-  } else if(msg.content == 'ping') {
+  } else if (msg.content == 'ping') {
     msg.react(msg.guild.emojis.cache.find(emoji => emoji.name == 'vsauce'))
     msg.reply('pong', { allowedMentions: { users: [] } })
-    .then(() => console.log(`Sent a reply to ${msg.author.username}`));
-  } else if(msg.content.startsWith('!test')) {
+      .then(() => console.log(`Sent a reply to ${msg.author.username}`));
+  } else if (msg.content.startsWith('!test')) {
     msg.channel.send('good testing dude!')
-  } 
-  
-  else if(msg.content.startsWith('?b')) {
+  }
+
+  else if (msg.content.startsWith('?b')) {
     const space = msg.content.split(' ');
     space.shift();
     const itemName = space.join(' ');
     // if(itemName.toLowerCase() === 'empress shield' || itemName.toLowerCase().includes('empress')) {
-      const item = await 
+    const item = await
       models.item.findOne(
         {
-          where: { name: { [Op.iLike]: `%${itemName}%` } }, 
+          where: { name: { [Op.iLike]: `%${itemName}%` } },
           include: [
             {
               model: models.component,
@@ -48,7 +49,7 @@ client.on('message', async msg => {
                   seperate: true,
                   model: models.item,
                   include: [
-                    {   
+                    {
                       seperate: true,
                       model: models.component,
                       // as: 'component',
@@ -58,7 +59,7 @@ client.on('message', async msg => {
                           model: models.item,
                           // as: 'component',
                           include: [
-                            {   
+                            {
                               seperate: true,
                               model: models.component,
                               include: [
@@ -66,10 +67,10 @@ client.on('message', async msg => {
                                   seperate: true,
                                   model: models.item,
                                   include: [
-                                    {   
+                                    {
                                       seperate: true,
                                       model: models.component,
-                                      
+
                                     }
                                   ],
                                 }
@@ -82,18 +83,29 @@ client.on('message', async msg => {
                   ],
                 }
               ],
-              
+
             },
           ],
         }
       )
-      console.log(item, itemName)
-      ;(await msg.channel.send(`\`\`\`${JSON.stringify(item, null, 2)}\`\`\``)).react('550481727165038593')
-      // msg.channel.send(`\`\`\`${JSON.stringify(item.name)}\`\`\``)
+    console.log(item, itemName);
+    // dev display to see object output
+    // (await msg.channel.send(`\`\`\`${JSON.stringify(item, null, 2)}\`\`\``)).react(itemEmoteList[item.name])
+    const newMsg = new Discord.MessageEmbed()
+      .setTitle(item.name)
+      // Set the color of the embed
+      // add another field to the item table that holds the rarity value to not need as stupid of a ternary
+      .setColor(item.id < 16 ? 0xffffff : item.id > 15 && item.id < 54 ? 0x756300 : item.id > 53 && item.id < 99 ? 0xc0c0c0 : item.id > 98 && item.id < 126 ? 0xffd700 : 0x000000)
+      // Set the main content of the embed
+      .setDescription(item.components.map(instance => `${instance.item.name} x${instance.amount}`))
+      .setThumbnail(`https://cdn.discordapp.com/emojis/${itemEmoteList[item.name]}.png?v=1`);
+
+    msg.channel.send(newMsg)
+    // msg.channel.send(`\`\`\`${JSON.stringify(item.name)}\`\`\``)
     // } else {
     //   msg.channel.send(itemName)
     // }
-  } 
+  }
   // else {
   //   // right click to open an emote in browser and copy the filename as the id
   //   (await msg.channel.send('Testing this functionality')).react('550481727165038593')
