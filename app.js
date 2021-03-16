@@ -94,10 +94,24 @@ client.on('message', async msg => {
     const newMsg = new Discord.MessageEmbed()
       .setTitle(item.name)
       // Set the color of the embed
-      .setColor(item.grade == 'Common' ? 0xffffff : item.grade == 'Copper' ? 0x756300 : item.grade == 'Silver' ? 0xc0c0c0 : item.grade == 'Gold' ? 0xffd700 : 0x000000)
+      .setColor(
+        item.grade == 'Common' ? 
+          0xffffff : 
+        item.grade == 'Copper' ? 
+          0x756300 : 
+        item.grade == 'Silver' ? 
+          0xc0c0c0 : 
+        item.grade == 'Gold' ? 
+          0xffd700 : 
+          0x000000
+      )
       // Set the main content of the embed
       // to replace the name with the image you must replace the emote names with a matching name instead of leaving them as is to match properly
-      .setDescription(item.components.map(instance => `<:${instance.item.name.replace(' ', '').replace('\'', '')}:${itemEmoteList[instance.item.name]}>${instance.item.name} x${instance.amount}`))
+      .setDescription(
+        item.components.map(instance => {
+          return `<:${instance.item.name.replace('(', '').replace(')', '').replace(' ', '').replace(' ', '').replace('\'', '')}:${itemEmoteList[instance.item.name]}>${instance.item.name} x${instance.amount}`
+        }
+        ))
       .setThumbnail(`https://cdn.discordapp.com/emojis/${itemEmoteList[item.name]}.png?v=1`);
 
     msg.channel.send(newMsg)

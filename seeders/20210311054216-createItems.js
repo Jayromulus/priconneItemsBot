@@ -58,7 +58,7 @@ module.exports = {
       { id: 41, grade: 'Copper', name: 'Hunting Boots', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
       { id: 42, grade: 'Copper', name: 'Witch\'s Boots', createdAt: new Date(), updatedAt: new Date() },
       { id: 43, grade: 'Copper', name: 'Cute Cap', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
-      { id: 44, grade: 'Copper', name: 'Legionaire Helm', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
+      { id: 44, grade: 'Copper', name: 'Legionnaire Helm', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
       { id: 45, grade: 'Copper', name: 'Priestess Hood', createdAt: new Date(), updatedAt: new Date() }, // Blueprint
       { id: 46, grade: 'Copper', name: 'Jewel of Courage', createdAt: new Date(), updatedAt: new Date() },
       { id: 47, grade: 'Copper', name: 'Spiked Bangle', createdAt: new Date(), updatedAt: new Date() },
@@ -175,7 +175,7 @@ module.exports = {
       { id: 154, grade: 'Silver', name: 'Graceful Flower Battleaxe Blueprint', createdAt: new Date(), updatedAt: new Date() },
       { id: 155, grade: 'Silver', name: 'Lightning Bolt Axe Blueprint', createdAt: new Date(), updatedAt: new Date() },
       { id: 156, grade: 'Silver', name: 'Thornblood Rod (Fragment)', createdAt: new Date(), updatedAt: new Date() },
-      { id: 157, grade: 'Silver', name: 'Devil\s Horn (Fragment)', createdAt: new Date(), updatedAt: new Date() },
+      { id: 157, grade: 'Silver', name: 'Devil\'s Horn (Fragment)', createdAt: new Date(), updatedAt: new Date() },
       { id: 158, grade: 'Silver', name: 'Protector of the Heavens Blueprint', createdAt: new Date(), updatedAt: new Date() },
       { id: 159, grade: 'Silver', name: 'Flower Bud Staff (Fragment)', createdAt: new Date(), updatedAt: new Date() },
       { id: 160, grade: 'Silver', name: 'Fashionable Armor Blueprint', createdAt: new Date(), updatedAt: new Date() },
